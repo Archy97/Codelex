@@ -19,18 +19,18 @@ namespace MoreVariablesAndPrinting
             teeth = "White";
             hair = "Brown";
 
-             heightInCm = height * 2.54; 
-             weightInKg = weight * 0.453592;
+            heightInCm = height * 2.54; 
+            weightInKg = weight * 0.453592;
 
             Console.WriteLine("Let's talk about " + name + ".");
-            Console.WriteLine("He's " + height.ToString("F2") + " inches tall.");
-            Console.WriteLine("He's " + weight.ToString("F2") + " pounds heavy.");
+            Console.WriteLine("He's " + height + " inches tall.");
+            Console.WriteLine("He's " + weight + " pounds heavy.");
             Console.WriteLine("Actually, that's not too heavy.");
             Console.WriteLine("He's got " + eyes + " eyes and " + hair + " hair.");
             Console.WriteLine("His teeth are usually " + teeth + " depending on the coffee.");
 
-            Console.WriteLine("If I add " + age + ", " + height.ToString("F2") + ", and " + weight.ToString("F2")
-                               + " I get " + (age + height.ToString("F2") + weight.ToString("F2")) + ".");
+            Console.WriteLine("If I add " + age + ", " + heightInCm.ToString("F2") + ", and " + weightInKg.ToString("F2")
+                   + " I get " + (age + heightInCm + weightInKg).ToString("F2") + ".");
 
             Console.ReadKey();
         }
