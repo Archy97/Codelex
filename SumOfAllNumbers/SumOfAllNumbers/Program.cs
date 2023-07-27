@@ -12,6 +12,7 @@
             {
                 sum += int.Parse(number[i].ToString());
             }
+
             Console.WriteLine(sum);
             Console.ReadKey();
            
