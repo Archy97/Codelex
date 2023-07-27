@@ -20,7 +20,7 @@ namespace ConvertMinutesToYearsAndDays
 
                 Console.WriteLine($"{totalMinutes} minutes is approximately {years} years and {days} days.");
             }
-                        Console.ReadKey();
+                Console.ReadKey();
         }
     }
 }
