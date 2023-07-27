@@ -24,22 +24,17 @@ namespace SpeedCalculator
 
             Console.Write("Input seconds: ");
             int seconds = int.TryParse(Console.ReadLine(), out int s) ? s : 0;
-
             
             totalTimeInSeconds = hours * 3600 + minutes * 60 + seconds;
-
            
             speedInMetersPerSecond = distanceInMeters / totalTimeInSeconds;
-
      
             speedInKmPerHour = speedInMetersPerSecond * 3.6;
             speedInMilesPerHour = speedInMetersPerSecond * 2.23694;
-
             
             Console.WriteLine($"Your speed in meters/second is {speedInMetersPerSecond}");
             Console.WriteLine($"Your speed in km/h is {speedInKmPerHour}");
             Console.WriteLine($"Your speed in miles/h is {speedInMilesPerHour}");
-
            
             Console.ReadKey();
         }
