@@ -1,4 +1,6 @@
-﻿namespace MoranNumber
+﻿using System;
+
+namespace MoranNumber
 {
     class Program
     {
@@ -21,7 +23,7 @@
             Console.Write("Enter a number: ");
             int num = int.Parse(Console.ReadLine());
 
-            bool isHarshad = num % CalculateSumOfDigits(num) == 0;
+            bool isHarshad =  num % CalculateSumOfDigits(num) == 0;
 
             if (isHarshad)
             {
