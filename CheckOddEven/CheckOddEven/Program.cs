@@ -19,9 +19,7 @@
             {
                 Console.WriteLine("Even Number");
             }
-
                 Console.WriteLine("bye!");
         }
-
     }
 }
