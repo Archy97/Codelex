@@ -8,7 +8,7 @@ namespace MappedAlpha
         {
             Console.WriteLine("Enter a letter: ");
             char inChar = char.ToLower(char.Parse(Console.ReadLine()));
-             PhoneKeyPad(inChar);
+            PhoneKeyPad(inChar);
             
         }
 
