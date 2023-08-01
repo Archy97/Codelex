@@ -15,7 +15,7 @@ namespace GetTheCentury
 
         public static int GetCentury(int year)
         {
-            int century = (year - 1) / 100 + 1;
+            int century = year / 100 + 1;
 
             return century;
         }
