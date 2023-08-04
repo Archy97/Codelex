@@ -6,6 +6,10 @@ namespace RockPaperScissors
     {
         static void Main(string[] args)
         {
+            string rock = "rock";
+            string paper = "paper";
+            string scissors = "scissors";
+
             string playerChoice = Console.ReadLine().ToLower(); // Convert to lowercase
             Random random = new Random();
             int computerChoice = random.Next(1, 4);
@@ -13,15 +17,15 @@ namespace RockPaperScissors
             Console.WriteLine("Computer chose " + GetChoiceText(computerChoice));
             Console.WriteLine("User chose " + playerChoice);
 
-            if (computerChoice == 1 && playerChoice == "rock" ||
-                computerChoice == 2 && playerChoice == "paper" ||
-                computerChoice == 3 && playerChoice == "scissors")
+            if ((computerChoice == 1 && playerChoice == rock) ||
+                (computerChoice == 2 && playerChoice == paper) ||
+                (computerChoice == 3 && playerChoice == scissors))
             {
                 Console.WriteLine("It is a tie.");
             }
-            else if (computerChoice == 1 && playerChoice == "paper" ||
-                     computerChoice == 2 && playerChoice == "scissors" ||
-                     computerChoice == 3 && playerChoice == "rock")
+            else if ((computerChoice == 1 && playerChoice == paper) ||
+                     (computerChoice == 2 && playerChoice == scissors) ||
+                     (computerChoice == 3 && playerChoice == rock))
             {
                 Console.WriteLine("User wins");
             }
