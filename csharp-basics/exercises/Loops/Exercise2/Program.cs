@@ -1,23 +1,26 @@
 ﻿using System;
 
-namespace Exercise2
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            int i, n;
-            
-            Console.WriteLine("Input number of terms : ");
-            n = Convert.ToInt32(Console.ReadLine());
-            /*
-            todo - complete loop to multiply i with itself n times, it is NOT allowed to use Math.Pow()
-            */
-            for (i = 0; i < n; i++)
-            {
-            }
+        int i, n, baseNumber;
 
-            Console.ReadKey();
+        Console.WriteLine("Input base number: ");
+        baseNumber = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Input exponent: ");
+        n = Convert.ToInt32(Console.ReadLine());
+
+        int result = 1;
+
+        for (i = 0; i < n; i++)
+        {
+            result *= baseNumber;
         }
+
+        Console.WriteLine($"Result of {baseNumber} raised to the power of {n} is: {result}");
+
+        Console.ReadKey();
     }
 }
