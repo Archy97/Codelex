@@ -1,6 +1,5 @@
 ﻿using System;
 
- Loops
 namespace NumberSquare
 {
     internal class Program
@@ -23,9 +22,13 @@ namespace NumberSquare
                 {
                     Console.Write(column);
                 }
+
                 Console.WriteLine();
             }
-=======
+        }
+    }
+}
+
 namespace CountPositiveAndSumNegatives
 {
     class Program
@@ -54,7 +57,6 @@ namespace CountPositiveAndSumNegatives
             }
 
             Console.WriteLine(positiveCount == 0 ? "[]" : $"{positiveCount} {sumNegatives}");
- main
         }
     }
 }
