@@ -11,10 +11,24 @@ namespace Exercise_6
 
             for (int i = 1; i <= input; i++)
             {
-                string output = (i % 3 == 0 && i % 5 == 0) ? "FizzBuzz" :
-                                (i % 3 == 0) ? "Fizz" :
-                                (i % 5 == 0) ? "Buzz" :
-                                i.ToString();
+                string output;
+
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    output = "FizzBuzz";
+                }
+                else if (i % 3 == 0)
+                {
+                    output = "Fizz";
+                }
+                else if (i % 5 == 0)
+                {
+                    output = "Buzz";
+                }
+                else
+                {
+                    output = i.ToString();
+                }
 
                 Console.Write(output + " ");
 
