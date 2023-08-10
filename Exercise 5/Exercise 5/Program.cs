@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using System.Diagnostics.Metrics;
 
+using System;
+
 namespace Exercise_5
 {
     internal class Program
     {
         static void Main(string[] args)
-        {   Console.WriteLine("Enter first word: ");
+        {
+            Console.WriteLine("Enter first word: ");
             var input1 = Console.ReadLine();
+
             Console.WriteLine("Enter second word");
             var input2 = Console.ReadLine();
 
@@ -25,3 +29,4 @@ namespace Exercise_5
         }
     }
 }
+
