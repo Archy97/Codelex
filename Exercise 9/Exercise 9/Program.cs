@@ -9,14 +9,14 @@ namespace RandomNumberExample
             Console.Write("Desired sum: ");
             int input = int.Parse(Console.ReadLine());
             Random random = new Random();
-
-            int sum, randomNumber1, randomNumber2;
+            int sum;
 
             do
             {
-                randomNumber1 = random.Next(1, 7);
-                randomNumber2 = random.Next(1, 7);
-                sum = randomNumber1 + randomNumber2;
+              int  randomNumber1 = random.Next(1, 7);
+              int  randomNumber2 = random.Next(1, 7);
+
+                 sum = randomNumber1 + randomNumber2;
 
                 Console.WriteLine($" {randomNumber1} and {randomNumber2} = {sum}");
 
