@@ -1,16 +1,11 @@
 ﻿using System;
 
- Loops
 namespace CharCaseSwap
-=======
-namespace FindNemoExample
- main
 {
     class Program
     {
         static void Main(string[] args)
         {
- Loops
             Console.Write("Enter a string: ");
             string input = Console.ReadLine();
 
@@ -24,10 +19,7 @@ namespace FindNemoExample
 
             string swappedString = new string(charSwappedChars);
             Console.WriteLine(swappedString);
-        }
-    }
-}
-=======
+
             Console.WriteLine(FindNemo("I am finding Nemo !"));
             Console.WriteLine(FindNemo("Nemo is me"));
             Console.WriteLine(FindNemo("I Nemo am"));
@@ -49,4 +41,3 @@ namespace FindNemoExample
         }
     }
 }
- main
