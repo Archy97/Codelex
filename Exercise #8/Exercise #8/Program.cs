@@ -1,12 +1,13 @@
-﻿namespace Exercise_8
+﻿using System;
+
+namespace Exercise_8
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            
             int input = int.Parse(Console.ReadLine());
-            int totalLength = input  * 4;
+            int totalLength = input * 4 - 4; 
 
             for (int i = 0; i < input; i++)
             {
