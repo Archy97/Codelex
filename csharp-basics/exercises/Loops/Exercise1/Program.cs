@@ -1,14 +1,17 @@
 ﻿using System;
 
-class Program
+namespace Exercise1
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.Write("The first 10 natural numbers are: ");
-
-        for (int i = 1; i <= 10; i++)
+        static void Main(string[] args)
         {
-            Console.Write(i + " ");
+            Console.Write("The first 10 natural numbers are: ");
+
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.Write(i + " ");
+            }
         }
     }
 }
