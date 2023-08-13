@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RandomNumberExample
+namespace Exercise_9
 {
     class Program
     {
