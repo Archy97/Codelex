@@ -1,11 +1,25 @@
 ﻿using System;
 
-namespace FindNemoExample
+namespace CharCaseSwap
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Console.Write("Enter a string: ");
+            string input = Console.ReadLine();
+
+            char[] charArray = input.ToCharArray();
+            char[] charSwappedChars = new char[charArray.Length];
+
+            for (int i = 0; i < charArray.Length; i++)
+            {
+                charSwappedChars[i] = char.IsUpper(charArray[i]) ? char.ToLower(charArray[i]) : char.ToUpper(charArray[i]);
+            }
+
+            string swappedString = new string(charSwappedChars);
+            Console.WriteLine(swappedString);
+
             Console.WriteLine(FindNemo("I am finding Nemo !"));
             Console.WriteLine(FindNemo("Nemo is me"));
             Console.WriteLine(FindNemo("I Nemo am"));
