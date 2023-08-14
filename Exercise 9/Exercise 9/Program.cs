@@ -22,5 +22,5 @@ namespace Exercise_9
 
             } while (sum != input);
         }
-    }
+    } 
 }
