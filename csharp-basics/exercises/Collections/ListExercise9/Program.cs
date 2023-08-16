@@ -27,9 +27,9 @@ namespace ListExercise9
                 "Pink"
             };
 
-            Console.WriteLine(string.Join(",", secondList));
-            //TODO: Write a C# program to join two lists.
-            //...
+            secondList.ForEach(item => firstList.Add(item));
+
+            Console.WriteLine(string.Join(",", firstList));
         }
     }
 }
