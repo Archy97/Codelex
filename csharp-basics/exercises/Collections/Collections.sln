@@ -43,7 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReplaceSubstring", "Replace
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UniqueValues", "UniqueValues\UniqueValues.csproj", "{0C3C99BF-7B23-4573-B285-2FAE43DA51FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 4", "Exercise 4\Exercise 4.csproj", "{D885E4C4-664A-4C52-A8EA-D7577BF03F6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise 4", "Exercise 4\Exercise 4.csproj", "{D885E4C4-664A-4C52-A8EA-D7577BF03F6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 5", "Exercise 5\Exercise 5.csproj", "{A9B17F31-E8B3-47B0-85AD-7D484BE5138F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -127,6 +129,10 @@ Global
 		{D885E4C4-664A-4C52-A8EA-D7577BF03F6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D885E4C4-664A-4C52-A8EA-D7577BF03F6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D885E4C4-664A-4C52-A8EA-D7577BF03F6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9B17F31-E8B3-47B0-85AD-7D484BE5138F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9B17F31-E8B3-47B0-85AD-7D484BE5138F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9B17F31-E8B3-47B0-85AD-7D484BE5138F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9B17F31-E8B3-47B0-85AD-7D484BE5138F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
