@@ -9,12 +9,12 @@
             var meter = new Odometer(baka , 0);
 
 
-            while (baka.CurrentFuelLiters > 0)
+            while (baka.ReportCurrentLiters() > 0)
             {
                 meter.IncrementMileage();
                 meter.Decrement();
 
-                Console.WriteLine($"Mileage: {meter.ReportCurrentMileage()} | Fuel: {baka.CurrentFuelLiters} liters");
+                Console.WriteLine($"Mileage: {meter.ReportCurrentMileage()} | Fuel: {baka.ReportCurrentLiters()} liters");
             }
 
             Console.WriteLine("Car has run out of fuel.");

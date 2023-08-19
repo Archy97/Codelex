@@ -31,7 +31,6 @@ namespace Exercise__3
                 Count++;
             }
         }
-
         public void Decrement()
         {
             if (Count == 10)
