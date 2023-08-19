@@ -1,30 +1,27 @@
 ﻿using System;
 
-namespace Exercise5
+class Program
 {
-    class Program
+    static int IndexOf(int[] array, int target)
     {
-        //TODO: Write a C# program to find the index of an array element.
-        private static void Main(string[] args)
+        for (int i = 0; i < array.Length; i++)
         {
-            int[] myArray = { 25, 14, 56, 15, 36, 56, 77, 18, 29, 49 };
-
-            var indexOfElement36 = -1;
-            var indexOfElement29 = -1;
-
-            /*
-            fixme
-            for (?) {
-                
+            if (array[i] == target)
+            {
+                return i;
             }
-            */
-            Console.WriteLine("Index position of 36 is: " + indexOfElement36);
-            Console.WriteLine("Index position of 29 is: " + indexOfElement29);
-
-            //Expected output:
-            //Index position of 36 is: 4
-            //Index position of 29 is: 8
-
         }
+        return -1;
+    }
+
+    static void Main(string[] args)
+    {
+        int[] myArray = { 25, 14, 56, 15, 36, 56, 77, 18, 29, 49 };
+
+        int input = int.Parse(Console.ReadLine());
+
+        int index = IndexOf(myArray, input);
+
+        Console.WriteLine("Index position of " + input + " in array is " + index);
     }
 }
