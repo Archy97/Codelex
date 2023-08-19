@@ -2,44 +2,7 @@
 
 namespace FuelConsumptionCalculator
 {
-    public class Car
-    {
-        private double startKilometers;
-        private double endKilometers;
-        private double liters;
-
-        public Car(double startOdo)
-        {
-            startKilometers = startOdo;
-            
-        }
-
-        public void FillUp(int mileage, double litersFilled)
-        {
-            startKilometers = endKilometers;
-            endKilometers = mileage;
-            liters = litersFilled;
-        }
-
-        public double CalculateConsumption()
-        {
-            return (double)liters / (endKilometers - startKilometers);
-        }
-
-        public bool IsGasHog()
-        {
-            double consumption = CalculateConsumption();
-            return (consumption * 100) > 15.0;
-        }
-
-        public bool IsEconomyCar()
-        {
-            double consumption = CalculateConsumption();
-            return (consumption * 100) < 5.0;
-        }
-    }
-
-    class CarTest
+    class Program
     {
         static void Main(string[] args)
         {
