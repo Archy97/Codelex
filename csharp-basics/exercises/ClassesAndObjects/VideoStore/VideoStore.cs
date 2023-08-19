@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace VideoStore
 {
@@ -43,17 +44,8 @@ namespace VideoStore
 
         public void ReceiveRating(string title, double rating)
         {
-            for (int i = 0; i < _inventory.Count; i++)
-            {
-                if (_inventory[i].Title == title)
-                {
-                    _inventory[i].ReceiveRating(rating);
-                    break;
-
-
-                }
-                
-            }
+            Video videoToReturn = _inventory.FirstOrDefault(video => video.Title == title);
+            videoToReturn?.BeingReturned();
         }
         public void DisplayLikedPercentage(string title)
         {   

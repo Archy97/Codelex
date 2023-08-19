@@ -35,7 +35,7 @@ namespace VideoStore
         public void ReceiveRating(double rating)
         {
             _ratings.Add(rating);
-            if (rating >= 7)
+            if (rating >= 7.0)
             {
                 LikedCount++;
             }

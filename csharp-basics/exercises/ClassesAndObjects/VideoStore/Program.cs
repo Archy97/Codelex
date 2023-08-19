@@ -19,7 +19,6 @@ namespace VideoStore
                 Console.WriteLine("Choose 4 to list inventory");
                 Console.WriteLine("Choose 5 to receive rating");
                 
-
                 int n = Convert.ToByte(Console.ReadLine());
 
                 switch (n)
