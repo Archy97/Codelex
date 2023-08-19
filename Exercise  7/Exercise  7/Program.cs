@@ -2,38 +2,8 @@
 
 namespace Exercise_7
 {
-    public class SavingsAccount
+    public static class Program
     {
-        public double AnnualInterestRate;
-        public double Balance;
-
-        public SavingsAccount(double startingBalance)
-        {
-            Balance = startingBalance;
-        }
-
-        public void Withdraw(double amount)
-        {
-            Balance -= amount;
-        }
-
-        public double GetBalance(double amount)
-        {
-            return Balance += amount;
-        }
-
-        public void AddMonthlyInterest()
-        {
-            var monthlyInterestRate = Balance * AnnualInterestRate / 12;     
-            
-            Balance += monthlyInterestRate;
-        }
-        public double CalculateMonthlyInterest()
-        {
-            var monthlyInterestRate = Balance * AnnualInterestRate / 12;
-            return monthlyInterestRate;
-        }
-
         public static void Main(string[] args)
         {
             Console.Write("Enter the starting balance: ");
@@ -42,12 +12,11 @@ namespace Exercise_7
             Console.Write("Enter the annual interest rate: ");
             double annualInterestRate = double.Parse(Console.ReadLine());
 
-
             Console.Write("How long has the account been opened? ");
             int NumbersOfMonths = int.Parse(Console.ReadLine());
 
             SavingsAccount account = new SavingsAccount(startingBalance);
-            account.AnnualInterestRate = annualInterestRate;
+            account.SetAnnualInterestRate(annualInterestRate);
 
             int totalDeposited = 0;
             int totalWithdrawn = 0;
@@ -58,7 +27,7 @@ namespace Exercise_7
                 Console.Write($"Enter amount deposited for month {i + 1}: ");
                 int deposited = int.Parse(Console.ReadLine());
                 totalDeposited += deposited;
-                account.GetBalance(deposited);
+                account.Deposit(deposited);
 
                 Console.Write($"Enter amount withdrawn for month {i + 1}: ");
                 int withdrawn = int.Parse(Console.ReadLine());
@@ -67,13 +36,14 @@ namespace Exercise_7
 
                 totalInterest += account.CalculateMonthlyInterest();
                 account.AddMonthlyInterest();
-
             }
 
             Console.WriteLine($"\nTotal deposited: {totalDeposited:C2}\n" +
                               $"Total withdrawn: {totalWithdrawn:C2}\n" +
                               $"Interest earned: {totalInterest:C2}\n" +
-                              $"Ending balance: {account.Balance:C2}");
+                              $"Ending balance: {account.GetBalance():C2}");
         }
     }
 }
+
+
