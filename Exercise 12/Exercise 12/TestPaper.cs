@@ -8,18 +8,15 @@ namespace Exercise_12
 {
     internal class TestPaper : ITestPaper
     {
-        public TestPaper(string subject , string[] markScheme , string passMark)
-        {
-            Subject = subject;
-            MarkScheme = markScheme;
-            PassMark = passMark;
-
-
-
-        }
         public string Subject { get; }
         public string[] MarkScheme { get; }
         public string PassMark { get; }
 
+        public TestPaper(string subject, string[] markScheme, string passMark)
+        {
+            Subject = subject;
+            MarkScheme = markScheme;
+            PassMark = passMark;
+        }
     }
 }

@@ -4,7 +4,5 @@ internal interface IStudent
 {
     string[] TestsTaken { get; }
 
-    void TakeTest(ITestPaper paper, string[] answers)
-    {
-    }
+    void TakeTest(ITestPaper paper, string[] answers);
 }
