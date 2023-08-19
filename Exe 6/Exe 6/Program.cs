@@ -4,18 +4,16 @@ namespace Exe_6
 {
     public class Dog
     {
-        public string Name;
-        public string Gender;
+        public string Name { get; set; }
+        public string Gender { get; set; }
         public Dog Mother;
         public Dog Father;
-
 
         public Dog ( string name, string gender)
         {
             Name = name;
             Gender = gender;
         }
-
 
          public string FathersName()
         {
@@ -26,17 +24,7 @@ namespace Exe_6
         {
             return Mother.Name == otherDog.Mother.Name;
         }
-
-
     }
-
-
-
-
-
-
-
-
 
     internal class Program
     {
