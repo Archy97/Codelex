@@ -42,6 +42,7 @@ namespace Exercise_7
 
             _balance += monthlyInterestRate;
         }
+
         public double CalculateMonthlyInterest()
         {
             return _balance * _annualInterestRate / 12;
