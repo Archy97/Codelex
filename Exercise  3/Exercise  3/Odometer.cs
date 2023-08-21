@@ -5,12 +5,12 @@ namespace Exercise__3
     internal class Odometer
     {
         public int CurrentMileage;
-        public FuelGauge fuelGauge;
-        public int Count;
+        private FuelGauge _fuelGauge;
+        private int _count;
 
         public Odometer(FuelGauge fuelgauge, int CurrentMileage)
         {
-            fuelGauge = fuelgauge;
+            _fuelGauge = fuelgauge;
             CurrentMileage = 0;
         }
 
@@ -28,15 +28,16 @@ namespace Exercise__3
             else
             {
                 CurrentMileage++;
-                Count++;
+                _count++;
             }
         }
+
         public void Decrement()
         {
-            if (Count == 10)
+            if (_count == 10)
             {
-                fuelGauge.DecrementFuel();
-                Count = 0;
+                _fuelGauge.DecrementFuel();
+                _count = 0;
             }
         }
     }
