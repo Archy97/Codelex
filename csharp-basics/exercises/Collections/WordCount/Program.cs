@@ -28,7 +28,7 @@ namespace Exercise
 
         static void Main(string[] args)
         {
-            string filePath = @"C:\Users\uniku\source\repos\Codelex5\csharp-basics\exercises\Collections\WordCount\lear.txt";
+            string filePath = "../../../lear.txt";
             FileInfo fileInfo = new FileInfo(filePath);
 
             Program program = new Program();
