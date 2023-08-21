@@ -32,7 +32,7 @@ namespace PhoneBook
 
         public void PutNumber(string name, string number)
         {
-            if (name == null || number == null)
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(number))
             {
                 throw new Exception( "Name cannot be null.");
             }
