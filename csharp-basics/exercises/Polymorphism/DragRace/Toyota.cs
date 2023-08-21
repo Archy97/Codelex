@@ -1,12 +1,12 @@
-using System;
+﻿using System;
 
 namespace DragRace
 {
-    public class Tesla : Car
+    public class Toyota : Car
     {
         public override void SpeedUp()
         {
-            _currentSpeed += 10;
+            _currentSpeed += 15;
         }
 
         public override void SlowDown()
@@ -16,7 +16,7 @@ namespace DragRace
 
         public override void StartEngine()
         {
-            Console.WriteLine("Silence");
+            Console.WriteLine("Rrrrrrrr.....");
         }
     }
 }
