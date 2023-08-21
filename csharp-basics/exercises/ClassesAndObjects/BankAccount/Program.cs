@@ -4,28 +4,28 @@ namespace BankAccount
 {
     class BankAccount
     {
-        public string AccountName;
-        public double Balance;
+        private string _accountName;
+        private double _balance;
 
         public BankAccount(string accountName, double balance)
         {
-            AccountName = accountName;
-            Balance = balance;
+            _accountName = accountName;
+            _balance = balance;
         }
 
         public string ShowUserNameAndBalance()
         {
-            if (Balance == -17.5)
+            if (_balance == -17.5)
             {
-                return $"{AccountName}, ${Math.Abs(Balance):F2}";
+                return $"{_accountName}, ${Math.Abs(_balance):F2}";
             }
-            else if (Balance < 0)
+            else if (_balance < 0)
             {
-                return $"{AccountName}, $-{Math.Abs(Balance):F2}";
+                return $"{_accountName}, $-{Math.Abs(_balance):F2}";
             }
             else
             {
-                return $"{AccountName}, ${Balance:F2}";
+                return $"{_accountName}, ${_balance:F2}";
             }
         }
 
