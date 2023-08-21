@@ -20,26 +20,13 @@ namespace VideoStore
 
         public void CheckOut(string title)
         {
-            for (int i = 0; i < _inventory.Count; i++)
-            {
-                if (_inventory[i].Title == title)
-                {
-                    _inventory[i].BeingCheckedOut();
-                    break;
-                }
-            }
+            _inventory.FirstOrDefault(book => book.Title == title)?.BeingCheckedOut();
         }
 
         public void ReturnVid(string title)
         {
-            for (int i = 0; i < _inventory.Count; i++)
-            {
-                if (_inventory[i].Title == title)
-                {
-                    _inventory[i].BeingReturned();
-                    break;
-                }
-            }
+            Video bookToCheckOut = _inventory.FirstOrDefault(book => book.Title == title);
+            bookToCheckOut?.BeingCheckedOut();
         }
 
         public void ReceiveRating(string title, double rating)
@@ -47,8 +34,9 @@ namespace VideoStore
             Video videoToReturn = _inventory.FirstOrDefault(video => video.Title == title);
             videoToReturn?.BeingReturned();
         }
+
         public void DisplayLikedPercentage(string title)
-        {   
+        {
             foreach (var video in _inventory)
             {
                 if (video.Title == title)
