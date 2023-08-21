@@ -7,7 +7,7 @@ namespace Flightmode
 {
     class Program
     {
-        private const string Path = @"C:\Users\uniku\source\repos\Codelex5\csharp-basics\exercises\Collections\FlightPlanner\flights.txt";
+        private const string Path = "../../../flights.txt";
 
         static void Main(string[] args)
         {
