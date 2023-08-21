@@ -4,9 +4,9 @@ namespace Shop
 {
     public class Product
     {
-        private string _name { get; }
-        private double _priceAtStart { get; }
-        private int _amountAtStart { get; }
+        private string _name;
+        private double _priceAtStart;
+        private int _amountAtStart;
 
         public Product(string name, double priceAtStart, int amountAtStart)
         {
