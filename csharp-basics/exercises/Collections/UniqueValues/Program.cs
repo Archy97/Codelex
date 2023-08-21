@@ -10,9 +10,12 @@ namespace UniqueValues
         {
             var values = new List<string> { "Hi", "Meow", "Hello", "Meow", "Hi!", "Meow", "Hi", "Bye" };
 
-            var transformedArray =  values.Distinct().ToArray();
+            var groupedCounts = values
+             .GroupBy(value => value)
+             .Where(group => group.Count() == 1)
+             .Select(group => group.Key);
 
-            Console.WriteLine(string.Join(",", transformedArray));
+            Console.WriteLine(string.Join(", ", groupedCounts));
         }
     }
 }
