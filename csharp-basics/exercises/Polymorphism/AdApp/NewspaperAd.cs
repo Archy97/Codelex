@@ -1,22 +1,36 @@
+using System.Data.Common;
+
 namespace AdApp
 {
     public class NewspaperAd : Advert
     {
         private int _column;
         private int _rate;
+        private int _NewsTotalCost;
 
-        public NewspaperAd(int fee) : base(fee)
+        public NewspaperAd(int fee, int column, int rate) : base(fee)
         {
+            _rate = rate;
+            _column = column;
         }
 
-        private new int Cost()
+        public override int Cost()
         {
-            return base.Cost();
+            var getfee = getFee();
+            int totalCost = _column * _rate;
+            _NewsTotalCost += totalCost + getfee;
+
+            return _NewsTotalCost;
         }
 
         public override string ToString()
         {
-            return base.ToString();
+            var result = base.ToString();
+            result += " Column : " + _column;
+            result += " Rate : " + _rate + "%";
+            result += $" TotalCost: £{Cost()}";
+
+            return result;
         }
     }
 }
