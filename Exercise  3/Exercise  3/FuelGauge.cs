@@ -8,26 +8,26 @@ namespace Exercise__3
 {
     internal class FuelGauge
     {
-        public int CurrentFuelLiters;
+        private int _currentFuelLiters;
 
         public FuelGauge()
         {
-            CurrentFuelLiters = 0;
+            _currentFuelLiters = 0;
         }
 
         public int ReportCurrentLiters()
         {
-            return CurrentFuelLiters;
+            return _currentFuelLiters;
         }
 
         public void FillUp(int amount)
         {
-            CurrentFuelLiters += amount;
+            _currentFuelLiters += amount;
         }
 
         public int DecrementFuel()
         {
-            return CurrentFuelLiters--;
+            return _currentFuelLiters--;
         }
     }
 }

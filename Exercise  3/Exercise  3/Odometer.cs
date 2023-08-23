@@ -4,7 +4,7 @@ namespace Exercise__3
 {
     internal class Odometer
     {
-        public int CurrentMileage;
+        private int _currentMileage;
         private FuelGauge _fuelGauge;
         private int _count;
 
@@ -16,18 +16,18 @@ namespace Exercise__3
 
         public int ReportCurrentMileage()
         {
-            return CurrentMileage;
+            return _currentMileage;
         }
 
         public void IncrementMileage()
         {
-            if (CurrentMileage == 9999999)
+            if (_currentMileage == 9999999)
             {
-                CurrentMileage = 0;
+                _currentMileage = 0;
             }
             else
             {
-                CurrentMileage++;
+                _currentMileage++;
                 _count++;
             }
         }
