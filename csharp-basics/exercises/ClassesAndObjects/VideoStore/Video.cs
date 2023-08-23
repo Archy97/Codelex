@@ -8,14 +8,14 @@ namespace VideoStore
     {
         private List<double> _ratings;
 
-        public string Title { get; set; }
-        public bool IsAvailable { get; set; }
+        public string Title { get; private set; }
+        private bool _isAvailable;
         public int LikedCount { get; private set; }
 
         public Video(string title)
         {
             Title = title;
-            IsAvailable = true;
+            _isAvailable = true;
             _ratings = new List<double>();
              LikedCount = 0;
         }
@@ -24,12 +24,12 @@ namespace VideoStore
 
         public void BeingCheckedOut()
         {
-            IsAvailable = false;
+            _isAvailable = false;
         }
 
         public void BeingReturned()
         {
-            IsAvailable = true;
+            _isAvailable = true;
         }
 
         public void ReceiveRating(double rating)
@@ -43,7 +43,7 @@ namespace VideoStore
 
         public override string ToString()
         {
-            return $"{Title}, rating: {AverageRating}, IsAvailable {IsAvailable}";
+            return $"{Title}, rating: {AverageRating}, IsAvailable {_isAvailable}";
         }
     }
 }
