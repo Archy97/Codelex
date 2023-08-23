@@ -18,52 +18,30 @@ namespace DecryptNumber
                 "!)(#&%(*@#%"
             };
 
-            foreach (var cryptedNumber in cryptedNumbers)
+            var decryptedNumbers = cryptedNumbers.Select(cryptedNumber =>
             {
-                var result = "";
-
-                foreach (var c in cryptedNumber)
+                var result = cryptedNumber.Select(c =>
                 {
-                    switch (c)
+                    return c switch
                     {
-                        case '!':
-                            result += "1";
-                            break;
-                        case '@':
-                            result += "2";
-                            break;
-                        case '#':
-                            result += "3";
-                            break;
-                        case '$':
-                            result += "4";
-                            break;
-                        case '%':
-                            result += "5";
-                            break;
-                        case '^':
-                            result += "6";
-                            break;
-                        case '&':
-                            result += "7";
-                            break;
-                        case '*':
-                            result += "8";
-                            break;
-                        case '(':
-                            result += "9";
-                            break;
-                        case ')':
-                            result += "0";
-                            break;
-                        default:
-                            result += c;
-                            break;
-                    }
-                }
+                        '!' => '1',
+                        '@' => '2',
+                        '#' => '3',
+                        '$' => '4',
+                        '%' => '5',
+                        '^' => '6',
+                        '&' => '7',
+                        '*' => '8',
+                        '(' => '9',
+                        ')' => '0',
+                        _ => c
+                    };
+                });
 
-                Console.WriteLine(result);
-            }
+                return new string(result.ToArray());
+            });
+
+            Console.WriteLine(string.Join(Environment.NewLine, decryptedNumbers));
         }
     }
 }
