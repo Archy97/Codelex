@@ -18,8 +18,8 @@ namespace ListExercise3
 
             Console.WriteLine(string.Join(",", colors));
 
-            colors.Insert(1 ,"White");
-            colors.Insert(1, "Purple");
+            colors.Insert(2 ,"White");
+            colors.Insert(2, "Purple");
 
             Console.WriteLine(string.Join(",", colors));
         }
