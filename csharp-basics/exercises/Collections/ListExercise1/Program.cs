@@ -7,15 +7,15 @@ namespace ListExercise1
     {
         private static void Main(string[] args)
         {
-            List<string> color = new List<string>();
+            List<string> colors = new List<string>();
 
-            color.Add("Red");
-            color.Add("Orange");
-            color.Add("Purple");
-            color.Add("Black");
-            color.Add("White");
+            colors.Add("Red");
+            colors.Add("Orange");
+            colors.Add("Purple");
+            colors.Add("Black");
+            colors.Add("White");
 
-            foreach (string c in color)
+            foreach (string c in colors)
             {
                 Console.WriteLine(c);
             }
