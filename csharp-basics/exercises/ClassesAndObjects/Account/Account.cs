@@ -4,28 +4,28 @@ namespace Account
 {
     class Account
     {
-        public string BankAccount;
-        public double Balance;
+        private string _bankAccount;
+        private double _balance;
 
         public Account(string bankAccount, double balance)
         {
-            BankAccount = bankAccount;
-            Balance = balance;
+            _bankAccount = bankAccount;
+            _balance = balance;
         }
 
         public double Withdraw(double withdraw)
         {
-            return Balance -= withdraw;
+            return _balance -= withdraw;
         }
 
         public double Deposit(double deposit)
         {
-            return Balance += deposit;
+            return _balance += deposit;
         }
 
         public override string ToString()
         {
-            return $"{BankAccount}: {Balance:C}";
+            return $"{_bankAccount}: {_balance:C}";
         }
     }
 }
