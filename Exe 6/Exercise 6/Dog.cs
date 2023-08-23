@@ -13,7 +13,7 @@
 
     public string FathersName()
     {
-        return (Father != null) ? Father.FathersName() : "Unknown";
+        return Father != null ? Father.FathersName() : "Unknown";
     }
 
     public bool HasSameMotherAs(Dog otherDog)
