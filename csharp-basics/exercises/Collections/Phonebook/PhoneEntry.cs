@@ -4,6 +4,5 @@ namespace PhoneBook
     {
         public string name;
         public string number;
-
     }
 }
