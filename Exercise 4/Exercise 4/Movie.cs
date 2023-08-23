@@ -1,7 +1,8 @@
 ﻿public class Movie
 {
-    public string Title;
-    public string Studio;
+    public string Title { get; private set; }
+    public string Studio { get; private set; }
+
     public string Rating;
 
     public Movie(string title, string studio, string rating)
