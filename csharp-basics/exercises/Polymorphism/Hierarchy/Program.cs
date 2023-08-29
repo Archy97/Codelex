@@ -22,16 +22,13 @@ namespace Hierarchy
                 string livingRegion = animalTokens[3];
                 string breed = null;
 
-                if (animalType == "Cat")
-                {
-                    breed = animalTokens[4];
-                }
-
                 switch (animalType)
                 {
                     case "Cat":
+                        breed = animalTokens[4];
                         animal = new Cat(animalType, animalName, animalWeight, livingRegion, breed);
                         break;
+
                     case "Tiger":
                         animal = new Tiger(animalType, animalName, animalWeight, livingRegion);
                         break;
