@@ -8,34 +8,37 @@ namespace VendingMachine
 {
     public class VendingMachine : IVendingMachine<Money, Product>
     {
+        private List<Product> _products = new List<Product>();
+        private Money _coin = new Money();
         public string Manufacturer { get; }
         public bool HasProducts { get; }
-        public Money Amount { get; set; }
-        public Product[] Products { get; set; }
+        public Money Amount => _coin;
+        public Product[] Products => _products.ToArray();
 
         public VendingMachine(string manufacturer)
         {
             Manufacturer = manufacturer;
             HasProducts = false;
-            Amount = new Money();
-            Products = new Product[0];
         }
 
         public Money InsertCoin(Money amount)
         {
-            Amount = new Money
+            _coin = new Money
             {
                 Euros = Amount.Euros + amount.Euros + (Amount.Cents + amount.Cents) / 100,
                 Cents = (Amount.Cents + amount.Cents) % 100
             };
 
-            return Amount;
+            return new Money { Euros = 0, Cents = 0 };
         }
 
         public Money ReturnMoney()
         {
-            Money returnedAmount = Amount;
-            Amount = new Money();
+            Money returnedAmount = new Money();
+            returnedAmount.Euros = _coin.Euros;
+            returnedAmount.Cents = _coin.Cents;
+            _coin.Cents = 0;
+            _coin.Euros = 0;
             return returnedAmount;
         }
 
@@ -48,21 +51,47 @@ namespace VendingMachine
                 Available = count
             };
 
-            Products = Products.Concat(new[] { newProduct }).ToArray();
+            _products.Add(newProduct);
+
             return true;
         }
 
         public bool UpdateProduct(int productNumber, string name, Money? price, int amount)
         {
-            for (int i = 0; i < Products.Length; i++)
+            for (int i = 0; i < _products.Count; i++)
             {
-                if (name.Equals(Products[i].Name))
+                Product product = _products[i];
+
+                if (name.Equals(product.Name))
                 {
-                    Products[i].Available = amount;
+                    int availableDifference = product.Available - amount;
+                    if (availableDifference > 0)
+                    {
+                        Money deductedPrice = new Money
+                        {
+                            Euros = product.Price.Euros * availableDifference,
+                            Cents = product.Price.Cents * availableDifference
+                        };
+
+                        _coin.Euros -= deductedPrice.Euros;
+                        _coin.Cents -= deductedPrice.Cents;
+
+                        while (_coin.Cents < 0)
+                        {
+                            _coin.Euros--;
+                            _coin.Cents += 100;
+                        }
+
+                        Console.WriteLine($"Amount Returned: {_coin.Euros}.{_coin.Cents:00}");
+                    }
+
+                    product.Available = amount;
+                    _products[i] = product;
                 }
             }
-
             return true;
+
         }
     }
+
 }

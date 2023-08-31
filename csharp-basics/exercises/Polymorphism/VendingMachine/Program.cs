@@ -8,12 +8,14 @@ namespace VendingMachine
         {
             VendingMachine vendingMachine = new VendingMachine("Acme Vending");
 
-            vendingMachine.AddProduct("Soda", new Money { Euros = 1, Cents = 50 }, 10);
-            vendingMachine.AddProduct("Chips", new Money { Euros = 1, Cents = 0 }, 2);
-            vendingMachine.AddProduct("Candy", new Money { Euros = 0, Cents = 75 }, 8);
+            vendingMachine.AddProduct("Soda", new Money { Euros = 1, Cents = 40 }, 10);
+            vendingMachine.AddProduct("Chips", new Money { Euros = 2, Cents = 00}, 2);
+            vendingMachine.AddProduct("Candy", new Money { Euros = 1, Cents = 60 }, 8);
+            vendingMachine.AddProduct("Milk", new Money { Euros = 3, Cents = 00 }, 8);
 
             Menu(vendingMachine);
         }
+
 
         public static void InsertCoins(VendingMachine vendingMachine)
         {
@@ -69,12 +71,11 @@ namespace VendingMachine
         public static void Menu(VendingMachine vendingMachine)
         {
             var userChoice = string.Empty;
-            while (!userChoice.Equals("4"))
+            while (!userChoice.Equals("3"))
             {
                 Console.WriteLine("1. Choice Product");
                 Console.WriteLine("2. Insert Coins");
-                Console.WriteLine("3. Return Money");
-                Console.WriteLine("4. Exit");
+                Console.WriteLine("3. Exit");
                 userChoice = Console.ReadLine();
 
                 switch (userChoice)
@@ -84,9 +85,6 @@ namespace VendingMachine
                         break;
                     case "2":
                         InsertCoins(vendingMachine);
-                        break;
-                    case "3":
-                        vendingMachine.ReturnMoney();
                         break;
                 }
             }
@@ -123,32 +121,10 @@ namespace VendingMachine
                         Console.WriteLine($"\nOut of stock {selectedProduct.Name}");
                     }
                     else
-                    {
+                    { 
                         Console.WriteLine($"You bought {selectedProduct.Name}");
-                        vendingMachine.UpdateProduct(1, selectedProduct.Name, selectedProduct.Price, selectedProduct.Available - 1);
-
-                        int euro;
-                        int cent;
-
-                        var totalCents = selectedProduct.Price.Euros * 100 + selectedProduct.Price.Cents;
-                        var balance = vendingMachine.Amount.Euros * 100 + vendingMachine.Amount.Cents;
-                        var balanceLeft = balance - totalCents;
-
-                        if (balanceLeft >= 100)
-                        {
-                            euro = balanceLeft - totalCents % 10;
-                            cent = totalCents % 10;
-                        }
-                        else
-                        {
-                            euro = 0;
-                            cent = balanceLeft;
-                        }
-
-                        Money newBalance = new Money();
-                        newBalance.Euros = euro;
-                        newBalance.Cents = cent;
-                        vendingMachine.Amount = newBalance;
+                        vendingMachine.UpdateProduct(choice - 1, selectedProduct.Name, selectedProduct.Price, selectedProduct.Available - 1);
+                        vendingMachine.ReturnMoney();
                     }
                 }
                 else
