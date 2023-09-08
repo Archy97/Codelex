@@ -14,19 +14,27 @@ namespace AdApp
             _fee = fee;
         }
 
+        public int getFee()
+        {
+            return _fee;
+        }
+
         public void SetFee(int fee) 
         {
             _fee = fee;
         }
 
-        public int Cost() 
+        public virtual int Cost() 
         {
             return _fee;
         }
 
         public override string ToString() 
         {
-            return "\nAdvert: Fee=" + _fee;
+            
+            string className = GetType().Name;
+
+            return $"\nAdvert: {className} = Fee " + _fee;
         }
     }
 }

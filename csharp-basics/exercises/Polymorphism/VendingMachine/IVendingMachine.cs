@@ -1,6 +1,6 @@
 ﻿namespace VendingMachine
 {
-    public interface IVendingMachine
+    public interface IVendingMachine<TMoney, TProduct>
     {
         string Manufacturer { get; }
 
@@ -26,7 +26,8 @@
         /// <param name="price"></param>
         /// <param name="count"></param>
         /// <returns>if product add was successful</returns>
-        bool AddProduct(string name, Money price, int count);
+        bool AddProduct(string name, Money price, int count); 
+        
 
         bool UpdateProduct(int productNumber, string name, Money? price, int amount);
     }
