@@ -11,14 +11,13 @@ namespace VendingMachine
         private List<Product> _products = new List<Product>();
         private Money _coin = new Money();
         public string Manufacturer { get; }
-        public bool HasProducts { get; }
+        public bool HasProducts => _products.Any(product => product.Available > 0);
         public Money Amount => _coin;
         public Product[] Products => _products.ToArray();
 
         public VendingMachine(string manufacturer)
         {
-            Manufacturer = manufacturer;
-            HasProducts = false;
+            Manufacturer = manufacturer; 
         }
 
         public Money InsertCoin(Money amount)
@@ -58,12 +57,10 @@ namespace VendingMachine
 
         public bool UpdateProduct(int productNumber, string name, Money? price, int amount)
         {
-            for (int i = 0; i < _products.Count; i++)
+            if (productNumber >= 0 && productNumber < _products.Count)
             {
-                Product product = _products[i];
+                Product product = _products[productNumber];
 
-                if (name.Equals(product.Name))
-                {
                     int availableDifference = product.Available - amount;
                     if (availableDifference > 0)
                     {
@@ -86,8 +83,8 @@ namespace VendingMachine
                     }
 
                     product.Available = amount;
-                    _products[i] = product;
-                }
+                    _products[productNumber] = product;
+                
             }
             return true;
 
