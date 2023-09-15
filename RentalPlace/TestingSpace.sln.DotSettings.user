@@ -1,0 +1,32 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=66ab1f44_002D7bbc_002D4922_002Db80b_002D406fd52bd4a4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CalculateIncome_ForAllYears_ReturnsTotalIncomeForAllYears #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.CalculateIncome_ForAllYears_ReturnsTotalIncomeForAllYears&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.CalculateIncome_YearWithOngoingRentals_ReturnsTotalIncome&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.CalculateIncome_YearWithOngoingRentalsExcluded_ReturnsTotalIncome&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.StartRent_ThrowsExceptionForNonExistentScooter&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.EndRent_InvalidScooterId_ThrowsWrongIdException&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ad59b39e_002D2e5c_002D448c_002Db4b0_002Db018a19d496e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EndRent_ScooterRentedFor10Minutes_ReturnsTotalPrice" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.EndRent_ScooterRentedFor10Minutes_ReturnsTotalPrice&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.EndRent_ScooterRentedFor1Hour_ReturnsTotalPrice&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::15FF452F-ACA5-4D17-AC58-16845A412735::net6.0::VendingMachine.Tests.VendingMachineTests.AddProduct_NamePriceAvailable_VerifyAddedProductProperties&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.EndRent_ScooterRentedFor1Days_ReturnsMaximumPriceFor1Days20e&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.EndRent_ScooterRentedFor1Days_ReturnsMaximumPriceFor1Days&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.EndRent_ScooterRentedFor1Days_ReturnsMaximumPriceFor24DayHours&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.EndRent_ScooterRented_ReturnsMaximumAmountBeforeAndAfterMidnight&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.EndRent_ScooterRentedFor1Days_ReturnsPriceFor24DayHours&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.EndRent_ScooterRented_ReturnsMaximumAmountForSameDay&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.EndRent_ScooterRentedFor1Minute_ReturnsTotalPriceAndIsRentedShouldBeFalse&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.EndRent_InvalidScooterId_ThrowsWrongIdException&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.CalculateIncome_WithYearAndIncludeNotCompletedRentals_ReturnsTotalIncome&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.CalculateIncome_ForAllYears_ReturnsTotalIncomeForAllYears&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d8d91748_002Dae3a_002D4e3b_002D8a75_002D38d7ecc062c5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CalculateIncome_ForAllYears_ReturnsTotalIncomeForAllYears" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::B8D7668B-9DFE-4E39-8381-B288FF0261B5::net6.0::RentalPlace.tests.RentalCompayTests.CalculateIncome_ForAllYears_ReturnsTotalIncomeForAllYears&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
