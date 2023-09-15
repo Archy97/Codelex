@@ -31,9 +31,7 @@ namespace VendingMachine
         }
 
         public Money InsertCoin(Money amount)
-
         {   
-
             _coin = new Money
             {
                 Euros = Amount.Euros + amount.Euros + (Amount.Cents + amount.Cents) / 100,
@@ -63,7 +61,7 @@ namespace VendingMachine
         }
 
             public Money ReturnMoney()
-        {
+            {
 
             if (_coin.Euros == 0 && _coin.Cents == 0)
             {
@@ -73,9 +71,8 @@ namespace VendingMachine
             Money returnedAmount = Amount;
             _coin = new Money();
 
-
             return returnedAmount;
-        }
+            }
 
         public bool AddProduct(string name, Money price, int count)
         {
@@ -102,7 +99,6 @@ namespace VendingMachine
         }
 
         public bool UpdateProduct(int productNumber, string name, Money? price, int amount)
-
         {
             if (string.IsNullOrEmpty(name))
             {
